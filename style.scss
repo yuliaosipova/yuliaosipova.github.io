@@ -199,7 +199,7 @@ body {
     }
 }
 
-.burger {
+.burger-icon {
     text-decoration: none;
     color: white;
     font-size: 26px;
@@ -210,9 +210,15 @@ body {
     }
     
 }
+.burger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
 
 .nav {
     padding-left: 30px;
+    display: flex;
     &-link {
         opacity: 0;
         position: relative;
@@ -818,7 +824,19 @@ body {
         max-width: 991px;
     }
     .nav-link {
+        line-height: 2em;
+        animation: opacityAnim 1s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    .menu {
         display: none;
+    }
+    .menu-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 50px;
     }
     .services {
         flex-wrap: wrap;
